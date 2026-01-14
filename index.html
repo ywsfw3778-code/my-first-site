@@ -10,8 +10,16 @@
 <body>
     <h1>مسا مسا </h1>
     <p>تغفيلات الشباب الجميله هتبقا علي الموقع ده</p>
-    <button onclick="showImage()">اضغط هنا</button>
-    <img id="myImage" src="me.jpg" class="hide" alt="صورة">
+
+    <div class="controls">
+        <button onclick="showGallery('majooda')">مجوده</button>
+        <button onclick="showGallery('elaaq')">العاق</button>
+        <button onclick="showGallery('hamzy')">حمزي</button>
+        <button onclick="showGallery('building')">جاري الانشاء</button>
+    </div>
+
+    <div id="gallery" class="gallery" aria-live="polite"></div>
+
 <script src="script.js"></script>
 </body>
 </html>
