@@ -3,22 +3,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>اول موقع للماد ساينتيستو</title>
+    <title>الماد ساينتيستو</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>مسا مسا </h1>
-    <p>تغفيلات الشباب الجميله هتبقا علي الموقع ده</p>
+    <header class="site-header">
+        <div class="container">
+            <div class="theme-toggle" role="toolbar" aria-label="تبديل الثيم">
+                <button id="btn-light" class="theme-btn" onclick="setTheme('light')" aria-label="ثيم فاتح">☀️</button>
+                <button id="btn-dark" class="theme-btn" onclick="setTheme('dark')" aria-label="ثيم داكن">🌙</button>
+            </div>
 
-    <div class="controls">
-        <button onclick="showGallery('majooda')">مجوده</button>
-        <button onclick="showGallery('elaaq')">العاق</button>
-        <button onclick="showGallery('hamzy')">حمزي</button>
-        <button onclick="showGallery('building')">جاري الانشاء</button>
-    </div>
+            <h1 class="site-title">الماد ساينتيستو</h1>
+            <p class="tagline">تغفيلات الشباب الجميله</p>
+        </div>
+    </header>
 
-    <div id="gallery" class="gallery" aria-live="polite"></div>
+    <main class="container">
+        <div class="controls" role="tablist" aria-label="مجموعات الصور">
+            <button class="btn" onclick="showGallery('majooda', this)">مجوده</button>
+            <button class="btn" onclick="showGallery('elaaq', this)">العاق</button>
+            <button class="btn" onclick="showGallery('hamzy', this)">حمزي</button>
+            <button class="btn" onclick="showGallery('building', this)">جاري الانشاء</button>
+        </div>
+
+        <section id="gallery" class="gallery" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"></div>
+    </footer>
 
 <script src="script.js"></script>
 </body>
